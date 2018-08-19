@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upload File PHP Ajax</title>
+</head>
+<body>
+    <form action="file-parser.php" method="post" enctype="multipart/form-data" id="filesForm">
+        <label for="file-1">File 1</label>
+        <input type="file" name="file-1" id="file-1">
+
+        <br><br>
+
+        <label for="file-2">File 2</label>
+        <input type="file" name="file-2" id="file-2">
+
+        <br><br>
+
+        <input type="button" id="sendFiles" value="Send Files">
+    </form>
+
+    <br>
+
+    <progress value="0" max="100" id="progress-bar"></progress>
+
+    <div id="status"></div>
+
+    <div id="msg"></div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous">
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
