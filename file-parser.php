@@ -70,7 +70,14 @@ if (!in_array(
     exit();
 }
 
-if(move_uploaded_file($fileTmpLoc, "uploads/$fileName" . "-" . uniqid() . "." . $fileExtension)){
+if (move_uploaded_file(
+    $fileTmpLoc,
+    sprintf("./uploads/%s-%s.%s",
+        $fileName,
+        uniqid(),
+        $fileExtension
+    )
+)){
     echo "$fileFullName upload is complete";
 } else {
     echo "move_uploaded_file function failed";

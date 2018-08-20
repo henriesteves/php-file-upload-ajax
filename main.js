@@ -3,13 +3,14 @@ $(document).ready(function() {
   var progressBar = $('#progress-bar');
   var status = $('#status');
   var msg = $('#msg');
-  var file1 = $("#file-1")[0].files[0];
+  var file1 = document.getElementById('file-1').files[0];
 
   sendFiles.click(function (e) {
     e.preventDefault();
 
     var form_data = new FormData();
     form_data.append('file', document.getElementById('file-1').files[0]);
+    form_data.append('file2', document.getElementById('file-2').files[0]);
 
     $.ajax({
       type: 'POST',
